@@ -7,7 +7,7 @@ A simple, interactive, and stylish **Rock-Paper-Scissors** game built using **HT
 
 ## 🎮 Live Demo
 
-[Play the Game Here](https://kareenhazem363.github.io/rock-paper-scissors/)
+[Play the Game Here](https://kareemhazem363.github.io/rock-paper-scissors/)
 
 ---
 
