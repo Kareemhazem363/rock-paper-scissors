@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="rock_paper_scissor.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="theme-toggle">
+  <button onclick="toggleTheme()">🌙 Toggle Theme</button>
+</div>
+    <h1>Rock Paper Scissors</h1>
+    <div class="game-area">
+      <div class="player">
+        <p>Player</p>
+        <div id="player-hand" class="hand">✋</div>
+      </div>
+      <p class="vs">v/s</p>
+      <div class="computer">
+        <p>Computer</p>
+        <div id="computer-hand" class="hand">✊</div>
+      </div>
+    </div>
+
+    <p id="result" class="result">Make your move!</p>
+
+    <div class="buttons">
+      <button onclick="play('rock')">✊ Rock</button>
+      <button onclick="play('paper')">✋ Paper</button>
+      <button onclick="play('scissors')">✌️ Scissors</button>
+    </div>
+
+    <div class="play-again">
+  <button onclick="resetGame()">🔁 Play Again</button>
+  <button class="reset-btn" onclick="resetAllGame()">🧹 Reset All</button>
+</div>
+
+    <div class="score">
+      <p>Won: <span id="won">0</span></p>
+      <p>Lost: <span id="lost">0</span></p>
+      <p>Draw: <span id="draw">0</span></p>
+    </div>
+  </div>
+
+  <script src="rock_paper_scissor.js"></script>
+</body>
+</html>

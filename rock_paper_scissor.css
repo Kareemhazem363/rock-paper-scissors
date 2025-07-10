@@ -1,0 +1,262 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e1e1e;
+    color: hsl(26, 62%, 43%);
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 1em;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3em;
+    color: #fff;
+    margin-bottom: 0.5em;
+}
+
+.game-area {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 1em;
+    padding: 1em;
+    gap: 3em;
+}
+
+.player,
+.computer {
+    flex: 1;
+    min-width: 300px;
+}
+
+.hand {
+    font-size: 10em;
+    transition: transform 0.3s ease;
+}
+
+.vs {
+    font-size: 4em;
+    color: #fff;
+}
+
+.result {
+    font-size: 2em;
+    margin: 0.5em 0;
+    color: #ffcc00;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin: 0.5em 0;
+}
+
+.buttons button {
+    padding: 0.8em 2em;
+    font-size: 1.2em;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.buttons button:hover:not(:disabled) {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+.buttons button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.play-again {
+    margin: 1em 0;
+}
+
+.play-again button {
+    padding: 0.8em 2em;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+    margin: 0.5em 0;
+}
+
+.theme-toggle {
+    margin-bottom: 1em;
+}
+
+.theme-toggle button {
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    background-color: #444;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.theme-toggle button:hover {
+    background-color: #666;
+}
+
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+body.light-mode .buttons button {
+    background-color: #ddd;
+    color: #000;
+}
+
+body.light-mode .buttons button:hover {
+    background-color: #ccc;
+}
+
+body.light-mode .score,
+body.light-mode .vs,
+body.light-mode .result,
+body.light-mode h1 {
+    color: #222;
+}
+
+body.light-mode .theme-toggle button {
+    background-color: #bbb;
+    color: #000;
+}
+
+.glow-win {
+    box-shadow: 0 0 20px 7px #00ff88;
+    border-radius: 50%;
+}
+
+.glow-lose {
+    opacity: 0.6;
+    filter: grayscale(80%);
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(20deg);
+    }
+
+    40% {
+        transform: rotate(-20deg);
+    }
+
+    60% {
+        transform: rotate(10deg);
+    }
+
+    80% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.shake {
+    animation: shake 1s ease;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 1em;
+    }
+
+    .game-area {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .hand {
+        font-size: 7em;
+    }
+
+    .vs {
+        font-size: 2.5em;
+    }
+
+    .score {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .result {
+        font-size: 1.5em;
+    }
+
+    .buttons button,
+    .play-again button {
+        font-size: 1em;
+    }
+}
+
+.reset-btn {
+    background-color: #c0392b;
+    color: white;
+    font-weight: bold;
+}
+
+.reset-btn:hover {
+    background-color: #e74c3c;
+    transform: scale(1.05);
+}
+
+.reset-btn {
+    background-color: #c0392b;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8em 2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.player p,
+.computer p {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 0.2em;
+    color: #b56e43;
+}
+
+body.light-mode .player p,
+body.light-mode .computer p {
+    color: #222;
+}
